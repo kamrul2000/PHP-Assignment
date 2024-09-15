@@ -1,0 +1,28 @@
+<?php
+class Animal {
+    public function Sound() {
+        return "Animal Sound";
+    }
+}
+class Crow extends Animal {
+    public function Sound() {
+        return "ka ka";
+    }
+}
+
+class Duck extends Animal {
+    public function Sound() {
+        return "pek pek";
+    }
+}
+
+function describeSound(Animal $animal) {
+    echo $animal->Sound() . "\n";
+}
+
+$crow = new Crow();
+$duck = new Duck();
+
+describeSound($crow);  
+describeSound($duck); 
+?>
